@@ -105,7 +105,7 @@ def tf_idf(whiskey_name_list,count_all_text):
     transformer = TfidfTransformer(smooth_idf=True)
     tfidf_matrix = transformer.fit_transform(X)    #輸出的各個文字各個詞的TF-IDF值
     w = tfidf_matrix.toarray()
-    tfidf = pd.DataFrame(w, columns=vectorizer.get_feature_names(),index=whiskey_name_list)  #***此行有問題 ***///////////
+    tfidf = pd.DataFrame(w, columns=vectorizer.get_feature_names(),index=whiskey_name_list)  
     print(tfidf)
     print("------------------------------")
 
